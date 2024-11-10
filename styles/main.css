@@ -1,0 +1,216 @@
+@layer reset, init, design;
+
+@import url(normalize.css) layer(reset);
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap) layer(init);
+
+@layer init {
+    :root {
+        --primary: #66d4d4;
+        --text: #000000;
+        --black: #000000;
+        --light: #FFFFFF;
+        --gray: #3B3E40;
+    }
+    html {
+        font-family: "Open Sans", sans-serif;
+        color: var(--black, black);
+        font-weight: 400;
+        line-height: 1.5;
+    }
+    .page__logo::before {
+        content: "";
+        display: block;
+        background: center / contain no-repeat transparent;
+        
+        background-image: url("../images/logo.svg");
+        width: auto;
+        height: 100%;
+        font-size: 1.5em;
+    }
+    .page__logo > span {
+        display: none;
+    }
+}
+
+/* VRSTVA PRO VAŠE STYLY */
+@layer design {
+
+.image-responsive{
+    display:block;
+    width: 100%;
+}
+.page__header{
+    background-image: url(../images/header-2560w.webp);
+    background-size: cover;
+    background-position: top left;
+    color: var(--light);
+    padding: calc(.75em + 4vw);
+    padding-top: 1em;
+}
+
+.page__logo{
+    display: block;
+        padding: 1em;
+        padding-bottom: 25em;
+        height: 4em;
+        margin: 0 auto;
+}
+
+    .image-responsive{
+        display:block;
+        width:100%
+    }
+   
+    .page__content{
+        max-width: 60em;
+        margin:auto;
+        padding: 1em;
+    }
+.page__intro{
+    max-width: 50em;
+}
+
+
+.button{
+    display: inline-block;
+    padding:0.5em 2em;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 0.5em;
+}
+
+.button{
+    background-color: var(--light);
+    color: var(--black)
+}
+.button:hover{
+    background-color: var(--black);
+    color: var(--light)
+}
+
+.picture-box{
+    margin:1em 0;
+}
+
+.picture-box__caption{
+    margin-top:1em;
+    font-size: 0.8em;
+    text-align: center;
+    color: var(--gray, gray);
+}
+
+.page__title{
+    font-size: 5em;
+    font-weight: 1000;
+    margin-bottom: 0.2em;
+}
+.h1{
+    font-size: 3em;
+      font-weight: 5000;
+      margin-bottom: 0.2em;
+}
+
+.h3{
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+
+}
+.highlight-box{
+    padding: 2em;
+    border: var(--primary) 3px solid;
+}
+
+.list >li{
+    margin:0.5em 0;
+}
+
+.list >li::marker{
+    color: var(--primary)
+    
+}
+
+
+.panel{
+    padding: 1em;
+     max-width: 18em;
+     display: inline-block;
+     vertical-align: top;
+}
+.button-aqua{
+    display: inline-block;
+    padding:0.5em 2em;
+    font-size: 1.2em;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 0.5em;
+    background-color: var(--primary);
+    color: white;
+}
+.button-aqua:hover{
+    display: inline-block;
+    padding:1em 2em;
+    text-decoration: none;
+    border-radius: 0.25em;
+    background-color: var(--black);
+    color: white;
+    text-decoration: underline;
+}
+
+.gallery{
+    --margin: 1em;
+    margin: calc(-1 * var(--margin));
+}
+.gallery__item{
+
+    display: inline-block;
+    width: calc(100% - 2 * var(--margin));
+    margin:var(--margin);
+}
+
+@media (min-width:768px){
+ .gallery__item--50w{
+    width: calc(50% - 2 * var(--margin));
+ }
+}
+
+
+
+.page__section{
+    padding: 1em;
+}
+
+.offer{
+    padding: 1em;
+    margin: 1em 0;
+    border: none;
+    background-color: var(--gray, gray);
+    color: var(--light, white);
+    text-align: center;
+}
+
+.bold{
+    font-size: 4em;
+}
+
+
+.page__footer{
+    background-color: var(--gray);
+    text-align: center;
+    
+    text-decoration: none;
+    padding:3em;
+}
+
+.link{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+
+}
